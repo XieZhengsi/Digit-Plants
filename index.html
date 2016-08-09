@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Digital Plants</title>
+<!-- ================================================================================== -->
+<!-- Import -->
+<!-- ================================================================================== -->
+<link rel="stylesheet" type="text/css" href="jquery.mobile-1.0.1.min.css" /> 
+<script src="jquery.js" charset="utf-8"></script>
+<script src="jquery.mobile-1.0.1.min.js" charset="utf-8"></script>  
+<script src="Function.js" type="application/x-javascript" charset="utf-8"></script>
+<style type="text/css" media="screen">@import "mycss.css";</style>
+</head>
+
+<body>
+<!-- ================================================================================== -->
+<!-- Main Screen -->
+<!-- ================================================================================== -->
+<div id="home" data-role="page" data-theme="e" style="background-image: url(images/background.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+
+	<div data-role="header" data-backbtn="true" data-theme="e" style="Opacity:.8">
+		<h1>Welcome</h1>
+		<a href="#about" data-icon="info" class="ui-btn-right" data-transition="slideup">About</a>
+	</div>
+	
+	<div data-role="content">
+		<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.8">
+  			 <h3>Quick Search</h3>
+  			 <div data-role="fieldcontain">
+  			 <span>
+    			<input type="search" name="search" id="QuicksearchInput" value="" placeholder="Please input Search Text"/>
+    		</span>
+    			<a href="#search" data-icon="search" data-role="button" data-inline="true" data-theme="b" id="QuicksearchBtn" style="Opacity:.8;">Search</a>
+			</div>
+
+		</div>
+	
+	
+		<span><a href="#browser"><img src="images/Browser.png" style="height:80px; width:80px" /></a></span>
+		<span><a href="#category"><img src="images/Category.png" style="height:80px; width:80px" /></a></span>
+		<span><a href="#collection" id="CollectionBtn"><img src="images/Collection.png" style="height:80px; width:80px" /></a></span>
+		<span><a href="#record"><img src="images/Record.png" style="height:80px; width:80px" /></a></span>
+		<span><a href="#export"><img src="images/Export.png" style="height:80px; width:80px" /></a></span>
+		<span><a href="#junkbucket"><img src="images/junkbucket.png" style="height:80px; width:80px" /></a></span>
+		<span><a href="#about" data-transition="slideup"><img src="images/About.png" style="height:80px; width:80px" /></a></span>
+	</div>
+	
+	<div data-role="footer" data-theme="e" data-position="fixed" style="Opacity:.7">
+		<div data-role="navbar">  
+			<ul>  
+				<li><a id="browseBtn" data-icon-iconpos="top" data-icon="grid" href="#browser">Browser</a></li>  
+				<li><a id="homeicon1" data-icon-iconpos="top" data-icon="home" href="#home">Home</a></li>  
+				<li><a id="CollectionBtn" data-icon-iconpos="top" data-icon="star" href="#collection">Collection</a></li>  
+				<li><a data-icon-iconpos="top" data-icon="search" href="#search">Search</a></li> 
+			</ul>  
+		</div>  
+	</div>
+</div>
+
+<!-- ================================================================================== -->
+<!-- About Screen -->
+<!-- ================================================================================== -->
+<div id="about" data-role="page" data-theme="e" style="background-image: url(images/Aboutbackground.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+	
+	<div data-role="content">
+			<img src="images/AboutTitle.png" style="height:120px" />           
+          	<HR style="FILTER: progid:DXImageTransform.Microsoft.Glow(color=#987cb9,strength=10)" width="100%" color=#987cb9 SIZE=1>  
+      
+			<span><img src="images/Picture.png" style="height:50px;width:50px;"/><strong> Picture Resource</strong></span>
+		
+			<ul  data-role="listview" data-split-icon="right" data-split-theme="d" data-theme="C" data-inset="true"  >
+				<li id="" data-icon="gear"><a id="" href="http://plantspages.com/">
+				<img src="images/boy.png" />
+				<h1>Plant Pages</h1>
+				<p>http://plantspages.com/</p>
+			</a></li>
+				<li id="" data-icon="gear"><a id="" href="http://www.public-domain-image.com/">
+				<img src="images/girl.png" />
+				<h1>Public-Domain-Image</h1>
+				<p>http://www.public-domain-image.com/</p>
+			</a></li></ul>
+			
+			<span><img src="images/Information.png" style="height:50px;width:50px;"/><strong> Information Resource</strong></span>
+			
+			<ul  data-role="listview" data-split-icon="right" data-split-theme="d" data-theme="C" data-inset="true" >
+				<li id="" data-icon="gear"><a id="" href="http://Type.org.uk/trees-of-trees//">
+				<img src="images/dog.png" />
+				<h1>Type of Plant</h1>
+				<p>http://Type.org.uk/trees-of-trees//</p>
+			</a></li>
+				<li id="" data-icon="gear"><a id="" href="http://en.wikipedia.org/wiki/Plant">
+				<img src="images/cat.png" />
+				<h1>WIKI-Plant</h1>
+				<p>http://en.wikipedia.org/wiki/Plant</p>
+			</a></li>
+			</ul>
+			
+			<a href="#home" data-theme = "c" data-role="button" data-icon="back" data-rel="back" data-iconpos="bottom" data-transition="slideup" style="Opacity:.6;">Back</a>
+	</div>
+	
+</div>
+
+<!-- ================================================================================== -->
+<!-- Browser Screen -->
+<!-- ================================================================================== -->
+<div id="browser" data-role="page" data-theme="a" style="background-image: url(images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+
+	<div data-role="header" data-backbtn="true" data-theme="e" style="Opacity:.7">
+		<a href="#home" data-icon="arrow-l">Back</a>
+		<h1>Quick Browse</h1>
+		<a href="#category" data-icon="gear" class="ui-btn-right">Category</a>
+	</div>
+	
+	<div data-role="content" id="ListofPlant">
+		<ul  data-role="listview" data-split-icon="right" data-split-theme="d" data-theme="C" data-filter="true" data-inset="true" >
+			<li id="plantList"><a id="Goto" href="#detailinfo">
+					<img id="ListImg" />
+					<h1 id="ListName"></h1>
+					<p id="ListBrief"></p>
+			</a></li>
+			</ul>
+	</div>
+	
+	<div data-role="footer" data-theme="e" data-position="fixed" style="Opacity:.7">
+		<div data-role="navbar">  
+			<ul>  
+				<li><a id="browseBtn" data-icon-iconpos="top" data-icon="grid" href="#browser">Browser</a></li>  
+				<li><a id="homeicon1" data-icon-iconpos="top" data-icon="home" href="#home">Home</a></li>  
+				<li><a id="CollectionBtn" data-icon-iconpos="top" data-icon="star" href="#collection">Collection</a></li>  
+				<li><a data-icon-iconpos="top" data-icon="search" href="#search">Search</a></li> 
+			</ul>  
+		</div>  
+	</div>
+</div>
+
+<!-- ================================================================================== -->
+<!-- Category Browser Screen (Species) -->
+<!-- ================================================================================== -->
+<div id="category" data-role="page" data-theme="a" style="background-image: url(images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+
+	<div data-role="header" data-backbtn="true" data-theme="e" style="Opacity:.7">
+		<a href="#home" data-icon="arrow-l">Back</a>
+		<h1>Category</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#category">species</a></li>
+				<li><a href="#ColorCategory">Color</a></li>
+				<li><a href="#TypeCategory">Type</a></li>
+			</ul>
+		</div>
+	</div>
+    
+	<div data-role="header" data-backbtn="true" data-theme="b" style="Opacity:.7">
+		<h1>Category Species</h1>
+	</div>
+	
+	<div data-role="content" id="ListofCategory">
+		<div id="CategoryField" data-role="collapsible" data-theme="b" data-content-theme="d" style="Opacity:.8">
+  			 <h3 id="Title"></h3>
+  			 <div data-role="fieldcontain" id="CategoryContain">
+  			 <ul  id="testfield" data-role="listview" data-split-icon="right" data-split-theme="d" data-theme="C" >
+				<li id="CategoryList"><a href="#detailcategoryinfo">
+					<img id="ListImg" />
+					<h1 id="ListName"></h1>
+					<p id="ListBrief"></p>
+				</a></li>
+			</ul>
+			</div>
+		</div>	
+	</div>
+	
+	<div data-role="footer" data-theme="e" data-position="fixed" style="Opacity:.7">
+		<div data-role="navbar">  
+			<ul>  
+				<li><a id="browseBtn" data-icon-iconpos="top" data-icon="grid" href="#browser">Browser</a></li>  
+				<li><a id="homeicon1" data-icon-iconpos="top" data-icon="home" href="#home">Home</a></li>  
+				<li><a id="CollectionBtn" data-icon-iconpos="top" data-icon="star" href="#collection">Collection</a></li>  
+				<li><a data-icon-iconpos="top" data-icon="search" href="#search">Search</a></li> 
+			</ul>  
+		</div>  
+	</div>
+</div>
+
+<!-- ================================================================================== -->
+<!-- Category Browser Screen (Color) -->
+<!-- ================================================================================== -->
+<div id="ColorCategory" data-role="page" data-theme="a" style="background-image: url(images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+
+	<div data-role="header" data-backbtn="true" data-theme="e" style="Opacity:.7">
+		<a href="#home" data-icon="arrow-l">Back</a>
+		<h1>Category</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#category">species</a></li>
+				<li><a href="#colorCategory">Color</a></li>
+				<li><a href="#TypeCategory">Type</a></li>
+			</ul>
+		</div>
+	</div>
+	<div data-role="header" data-backbtn="true" data-theme="b" style="Opacity:.7">
+		<h1>Category Color</h1>
+	</div>
+	
+	<div data-role="content" id="ListofColor">
+		<div id="ColorField" data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.8">
+  			 <h3 id="ColorTitle"></h3>
+  			 <div data-role="fieldcontain" id="ColorContain">
+  			 <ul  id="Colorfield" data-role="listview" data-split-icon="right" data-split-theme="d" data-theme="C" >
+				<li id="ColorList"><a href="#detailcategoryinfo">
+					<img id="ListImg" />
+					<h1 id="ListName"></h1>
+					<p id="ListBrief"></p>
+				</a></li>
+			</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="footer" data-theme="e" data-position="fixed" style="Opacity:.7">
+		<div data-role="navbar">  
+			<ul>  
+				<li><a id="browseBtn" data-icon-iconpos="top" data-icon="grid" href="#browser">Browser</a></li>  
+				<li><a id="homeicon1" data-icon-iconpos="top" data-icon="home" href="#home">Home</a></li>  
+				<li><a id="CollectionBtn" data-icon-iconpos="top" data-icon="star" href="#collection">Collection</a></li>  
+				<li><a data-icon-iconpos="top" data-icon="search" href="#search">Search</a></li> 
+			</ul>  
+		</div>  
+	</div>
+</div>
+
+<!-- ================================================================================== -->
+<!-- Category Browser Screen (Type) -->
+<!-- ================================================================================== -->
+<div id="TypeCategory" data-role="page" data-theme="a" style="background-image: url(images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+
+	<div data-role="header" data-backbtn="true" data-theme="e" style="Opacity:.7">
+		<a href="#home"  data-icon="arrow-l">Back</a>
+		<h1>Category</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#category">species</a></li>
+				<li><a href="#ColorCategory">Color</a></li>
+				<li><a href="#TypeCategory">Type</a></li>
+			</ul>
+		</div>
+	</div>
+	<div data-role="header" data-backbtn="true" data-theme="b" style="Opacity:.7">
+		<h1>Category Type</h1>
+	</div>
+	
+	<div data-role="content" id="ListofType">
+		<div id="TypeField" data-role="collapsible" data-theme="a" data-content-theme="c" style="Opacity:.7">
+  			 <h3 id="TypeTitle"></h3>
+  			 <div data-role="fieldcontain" id="TypeContain">
+  			 <ul  id="Typefield" data-role="listview" data-split-icon="right" data-split-theme="d" data-theme="C" >
+				<li id="TypeList"><a href="#detailcategoryinfo">
+					<img id="ListImg" />
+					<h1 id="ListName"></h1>
+					<p id="ListBrief"></p>
+				</a></li>
+			</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="footer" data-theme="e" data-position="fixed" style="Opacity:.7">
+		<div data-role="navbar">  
+			<ul>  
+				<li><a id="browseBtn" data-icon-iconpos="top" data-icon="grid" href="#browser">Browser</a></li>  
+				<li><a id="homeicon1" data-icon-iconpos="top" data-icon="home" href="#home">Home</a></li>  
+				<li><a id="CollectionBtn" data-icon-iconpos="top" data-icon="star" href="#collection">Collection</a></li>  
+				<li><a data-icon-iconpos="top" data-icon="search" href="#search">Search</a></li> 
+			</ul>  
+		</div>  
+	</div>
+</div>
+
+<!-- ================================================================================== -->
+<!-- Detail Plant Screen -->
+<!-- ================================================================================== -->
+<div id="detailinfo" data-role="page" data-theme="a" style="background-image: url(images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+
+	<div data-role="header" data-backbtn="true" data-theme="e" style="Opacity:.7">
+		<a href="#browser" data-icon="arrow-l">Back</a>
+		<h1>Detail Information</h1>
+		<a id="Collect"href="#detailinfoCollected" data-theme="c" data-icon="star" data-transition="flip">Collect ?</a>			
+	</div>
+	
+		<div data-role="header" data-backbtn="true" data-theme="d" style="Opacity:.7">
+			<h1 id="DetailName"></h1>
+		</div>
+	
+	<div data-role="content">
+		<div id="PlantImage" style="Opacity:.8"></div>
+	
+		<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.5" data-collapsed="false">
+  			<h3>Brief Describe</h3>
+  			 <div data-role="fieldcontain">
+  			 	<span id="BriefContent"></span>
+  			 </div>
+  		</div>
+  		
+  		<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.5" data-collapsed="false">
+  			<h3>Detail Describe</h3>
+  			 <div data-role="fieldcontain">
+  			   	<span id="DetailContent"></span>
+  			</div>
+  		</div>
+	</div>
+	
+	<div data-role="footer" data-theme="e" data-position="fixed" style="Opacity:.7">
+		<div data-role="navbar">  
+			<ul>  
+				<li><a id="browseBtn" data-icon-iconpos="top" data-icon="grid" href="#browser">Browser</a></li>  
+				<li><a id="homeicon1" data-icon-iconpos="top" data-icon="home" href="#home">Home</a></li>  
+				<li><a id="CollectionBtn" data-icon-iconpos="top" data-icon="star" href="#collection">Collection</a></li>  
+				<li><a data-icon-iconpos="top" data-icon="search" href="#search">Search</a></li> 
+			</ul>  
+		</div>  
+	</div>
+</div>
+
+<!-- ================================================================================== -->
+<!-- Detail Plant of Category Screen -->
+<!-- ================================================================================== -->
+<div id="detailcategoryinfo" data-role="page" data-theme="a" style="background-image: url(images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+
+	<div data-role="header" data-backbtn="true" data-theme="e" style="Opacity:.7">
+		<a href="#" data-rel="back" data-icon="arrow-l">Back</a>
+		<h1>Detail Information</h1>
+	</div>
+	
+		<div data-role="header" data-backbtn="true" data-theme="d" style="Opacity:.7">
+			<h1 id="DetailCategoryName"></h1>
+		</div>
+	
+	<div data-role="content">
+		<div id="PlantCategoryImage" style="Opacity:.8"></div>
+	
+		<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.5" data-collapsed="false">
+  			<h3>Brief Describe</h3>
+  			 <div data-role="fieldcontain">
+  			 	<span id="BriefCategoryContent"></span>
+  			 </div>
+  		</div>
+  		
+  		<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.5">
+  			<h3>Detail Describe</h3>
+  			 <div data-role="fieldcontain">
+  			   	<span id="DetailCategoryContent"></span>
+  			</div>
+  		</div>
+	</div>
+	
+	<div data-role="footer" data-theme="e" data-position="fixed" style="Opacity:.7">
+		<div data-role="navbar">  
+			<ul>  
+				<li><a id="browseBtn" data-icon-iconpos="top" data-icon="grid" href="#browser">Browser</a></li>  
+				<li><a id="homeicon1" data-icon-iconpos="top" data-icon="home" href="#home">Home</a></li>  
+				<li><a id="CollectionBtn" data-icon-iconpos="top" data-icon="star" href="#collection">Collection</a></li>  
+				<li><a data-icon-iconpos="top" data-icon="search" href="#search">Search</a></li> 
+			</ul>  
+		</div>  
+	</div>
+</div>
+
+<!-- ================================================================================== -->
+<!-- Detail Collected Plant Screen -->
+<!-- ================================================================================== -->
+<div id="detailinfoCollected" data-role="page" data-theme="a" style="background-image: url(images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+
+	<div data-role="header" data-backbtn="true" data-theme="e" style="Opacity:.7">
+		<a href="#browser" data-icon="arrow-l">Back</a>
+		<h1>Detail Information</h1>
+		<a id="Collected"href="#collection" data-theme="e" data-icon="star">Collected</a>			
+	</div>
+	
+		<div data-role="header" data-backbtn="true" data-theme="d" style="Opacity:.7">
+			<h1 id="CollectedName"></h1>
+		</div>
+	
+	<div data-role="content">
+		<div id="CollectedImage" style="Opacity:.8"></div>
+	
+		<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.5" data-collapsed="false">
+  			<h3>Brief Describe</h3>
+  			 <div data-role="fieldcontain">
+  			 	<span id="CollectedBriefContent"></span>
+  			 </div>
+  		</div>
+  		
+  		<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.5">
+  			<h3>Detail Describe</h3>
+  			 <div data-role="fieldcontain">
+  			   	<span id="CollectedContent"></span>
+  			</div>
+  		</div>
+	</div>
+	
+	<div data-role="footer" data-theme="e" data-position="fixed" style="Opacity:.7">
+		<div data-role="navbar">  
+			<ul>  
+				<li><a id="browseBtn" data-icon-iconpos="top" data-icon="grid" href="#browser">Browser</a></li>  
+				<li><a id="homeicon1" data-icon-iconpos="top" data-icon="home" href="#home">Home</a></li>  
+				<li><a id="CollectionBtn" data-icon-iconpos="top" data-icon="star" href="#collection">Collection</a></li>  
+				<li><a data-icon-iconpos="top" data-icon="search" href="#search">Search</a></li> 
+			</ul>  
+		</div>  
+	</div>
+</div>
+
+<!-- ================================================================================== -->
+<!-- Collection Screen -->
+<!-- ================================================================================== -->
+<div id="collection" data-role="page" data-theme="a" style="background-image: url(images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+
+	<div data-role="header" data-backbtn="true" data-theme="e" style="Opacity:.7">
+		<a href="#home" data-icon="arrow-l">Back</a>
+		<h1>Collection Screen</h1>
+		<a href="#category" data-icon="gear" class="ui-btn-right">Category</a>
+	</div>
+	
+	<div data-role="content" id="ListofCollection">
+		<ul  data-role="listview" data-split-icon="right" data-split-theme="d" data-theme="C" data-filter="true" data-inset="true">
+			<li id="CollectionList"><a href="#detailinfoCollected" id="#Goto">
+					<img id="ListImg" />
+					<h1 id="ListName"></h1>
+					<p id="ListBrief"></p>
+			</a></li>
+			</ul>
+	</div>
+	
+	<div data-role="footer" data-theme="e" data-position="fixed" style="Opacity:.7">
+		<div data-role="navbar">  
+			<ul>  
+				<li><a id="browseBtn" data-icon-iconpos="top" data-icon="grid" href="#browser">Browser</a></li>  
+				<li><a id="homeicon1" data-icon-iconpos="top" data-icon="home" href="#home">Home</a></li>  
+				<li><a id="CollectionBtn" data-icon-iconpos="top" data-icon="star" href="#collection">Collection</a></li>  
+				<li><a data-icon-iconpos="top" data-icon="search" href="#search">Search</a></li> 
+			</ul>  
+		</div>  
+	</div>
+</div>
+
+<!-- ================================================================================== -->
+<!-- Search Screen -->
+<!-- ================================================================================== -->
+<div id="search" data-role="page" data-theme="e" style="background-image: url(images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+
+	<div data-role="header" data-backbtn="true" data-theme="e" style="Opacity:.7">
+		<a href="#home" data-icon="arrow-l">Back</a>
+		<h1>Search</h1>
+	</div>
+	
+	<div data-role="content">
+		<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.8" data-collapsed="false">
+  			 <h3>Search</h3>
+  			 <div data-role="fieldcontain">
+  			 <span>
+    			<input type="search" name="search" id="searchInput" value="" placeholder="Please input Search Text" />				
+    		</span>
+			</div>
+			
+			<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.8">
+  				<h3>Advance</h3>
+  			<div data-role="fieldcontain">
+				<label for="select-choice-a" class="select">Select Type of Plant</label>
+				<select name="select-choice-a" id="selectType" data-native-menu="false">
+					<option id="TypeFirst" value="" selected="selected">Select Type</option>
+					<option value="1">Type:Tree</option>
+					<option value="2">Type:Flower</option>
+				</select>
+			</div>
+			
+			<div data-role="fieldcontain">
+				<label for="select-choice-a" class="select">Select Color of Plant</label>
+				<select name="select-choice-a" id="selectColor" data-native-menu="false">
+					<option id="ColorFirst" value="" selected="selected">Select Color</option>
+					<option value="1">Color:Green</option>
+					<option value="2">Color:White</option>
+					<option value="3">Color:Blue</option>
+					<option value="4">Color:Red</option>
+				</select>
+			</div>
+			
+			 <div data-role="fieldcontain">
+				<label for="select-choice-a" class="select">Select Species of Plant</label>
+				<select name="select-choice-a" id="selectSpecies" data-native-menu="false">
+					<option id="SpeciesFirst" value="" selected="selected">Select Species</option>
+					<option value="1">Species:Alders</option>
+					<option value="2">Species:Apples</option>
+					<option value="3">Species:Ashes</option>
+					<option value="4">Species:Birches</option>
+					<option value="5">Species:Beeches</option>
+					<option value="6">Species:Cherries and Plums</option>
+					<option value="7">Species:Elms</option>
+					<option value="8">Species:Rowans and Whitebeams</option>
+					<option value="9">Species:Willows</option>
+				</select>
+			</div>
+			</div>
+    	<a href="#search" data-role="button" data-icon="search" data-inline="true" data-theme="b" id="searchBtn" style="float:right">Search</a>
+		<a href="#" data-role="button" data-inline="true" data-icon="alert" data-theme="c" id="ResetBtn" >Reset</a>	
+		</div>
+		
+		<ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="e" style="Opacity:.8">
+			<li data-role="list-divider">Result</li>
+			<li>	
+			<span data-role="content" id="ListofResult">
+				<ul  data-role="listview" data-split-icon="right" data-split-theme="d" data-theme="C">
+					<li id="ResultList"><a href="#detailinfo" id="#Goto">
+						<img id="ListImg" src="images/Caution.png" />
+						<h1 id="ListName">Nothing be found</h1>
+						<p id="ListBrief"></p>
+					</a>
+				</li>
+				</ul>
+			</span>
+			</li>
+		</ul>
+	</div>
+	
+	<div data-role="footer" data-theme="e" data-position="fixed" style="Opacity:.7">
+		<div data-role="navbar">  
+			<ul>  
+				<li><a id="browseBtn" data-icon-iconpos="top" data-icon="grid" href="#browser">Browser</a></li>  
+				<li><a id="homeicon1" data-icon-iconpos="top" data-icon="home" href="#home">Home</a></li>  
+				<li><a id="CollectionBtn" data-icon-iconpos="top" data-icon="star" href="#collection">Collection</a></li>  
+				<li><a data-icon-iconpos="top" data-icon="search" href="#search">Search</a></li> 
+			</ul>  
+		</div>  
+	</div>
+</div>
+
+<!-- ================================================================================== -->
+<!-- Record Screen -->
+<!-- ================================================================================== -->
+<div id="record" data-role="page" data-theme="a" style="background-image: url(images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+
+	<div data-role="header" data-backbtn="true" data-theme="e" style="Opacity:.7">
+		<a href="#home" data-icon="arrow-l">Back</a>
+		<h1>Record List</h1>
+	</div>
+	
+	<div data-role="header" data-backbtn="true" data-theme="d" style="Opacity:.7">
+		<span><a href="#junkbucket" style="float:right"><img src="images/junkbucket.png" style="height:50px; width:50px" /></a></span>
+		<span><a href="#export" style="float:right"><img src="images/Export.png" style="height:50px; width:50px" /></a></span>
+	</div>
+		
+	<div data-role="content">
+		<ul  data-role="listview" data-split-theme="d" data-theme="c" data-inset="true" style="Opacity:.9" >
+			<li id="AddList" class="test" data-theme="b"><a href="#AddRecord">
+					<img id="ListImg" src="images/Plus.png" />
+					<h1 id="ListName"> Click Here Add Record</h1>
+					<p id="ListBrief"></p>
+			</a>
+			</li>
+		</ul>
+		
+		<ul  data-role="listview" data-split-theme="d" data-theme="c" data-inset="true" id="ListofRecord" style="Opacity:9" >
+			<li id="RecordList" class="test" data-theme="c"><a href="#RecordDetail">
+					<img id="ListImg"/>
+					<h1 id="ListName"></h1>
+					<p id="ListBrief"></p>
+					<p id="ListBrief2"></p>
+			</a>
+			<a href="#" data-transition="slideup" data-icon="delete" id="SlidedeleteBtn" class="test2"></a>
+			</li>
+		</ul>
+	</div>
+	
+	<div data-role="footer" data-theme="e" data-position="fixed" style="Opacity:.7">
+		<div data-role="navbar">  
+			<ul>  
+				<li><a id="browseBtn" data-icon-iconpos="top" data-icon="grid" href="#browser">Browser</a></li>  
+				<li><a id="homeicon1" data-icon-iconpos="top" data-icon="home" href="#home">Home</a></li>  
+				<li><a id="CollectionBtn" data-icon-iconpos="top" data-icon="star" href="#collection">Collection</a></li>  
+				<li><a data-icon-iconpos="top" data-icon="search" href="#search">Search</a></li> 
+			</ul>  
+		</div>  
+	</div>
+</div>
+
+<!-- ================================================================================== -->
+<!-- Add Record Screen -->
+<!-- ================================================================================== -->
+<div id="AddRecord" data-role="page" data-theme="a" style="background-image: url(images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+
+	<div data-role="header" data-backbtn="true" data-theme="e" style="Opacity:.7">
+		<a href="#home" data-rel="back" data-icon="arrow-l">Back</a>
+		<h1>New Record Form</h1>
+	</div>
+	
+	<div data-role="header" data-backbtn="true" data-theme="d" style="Opacity:.7">
+		<span><a href="#record" style="float:right"><img src="images/delete.png" style="height:50px; width:50px" /></a></span>
+		<span><a href="#junkbucket" style="float:right"><img src="images/junkbucket.png" style="height:50px; width:50px" /></a></span>
+		<span><a href="#export" style="float:right"><img src="images/Export.png" style="height:50px; width:50px" /></a></span>
+	</div>
+		
+	<div data-role="content">
+	
+		<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.8" data-collapsed="false">
+  			 <h3>New Record</h3>
+  			 <div data-role="fieldcontain">
+  				 <span>
+  			 		<h2>New Record Title</h2>
+			
+					<div data-role="fieldcontain">
+	        			 <input type="text" name="name" id="RecordTitle" value="" data-theme="c" />
+					</div>
+    			</span>
+    			
+			</div>
+			
+			<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.8" data-collapsed="false">
+  			 <h3>Record Information</h3>
+  			 <div data-role="fieldcontain">
+  				 <span>
+  			 		<div data-role="fieldcontain">
+	         		<p>Student Name:</p>
+	        		 <input type="text" name="name" id="studentname" value="" data-theme="c" />
+					</div>
+			
+					<div data-role="fieldcontain">
+	         			<p>Visited Site:</p>
+	         			<input type="text" name="name" id="visitedSite" value="" data-theme="c" />
+					</div>
+
+
+					<p>Date of Record:</p>
+					
+					<fieldset data-role="controlgroup" data-type="horizontal">
+					
+					<select name="select-choice-month" id="month" data-theme="b">
+						<option>Month</option>
+						<option value="Jan">January</option>
+						<option value="Dec">December</option>
+						<option value="Feb">February</option>
+						<option value="Mar">March</option>
+						<option value="Apr">April</option>
+						<option value="May">May</option>
+						<option value="Jun">June</option>
+						<option value="Jul">July</option>
+						<option value="Aug">August</option>
+						<option value="Sep">September</option>
+						<option value="Oct">October</option>
+						<option value="Nov">November</option>
+						<option value="Dec">December</option>
+					</select>
+
+					<select name="select-choice-day" id="day" data-theme="e">
+						<option>Day</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+					</select>
+
+					<select name="select-choice-year" id="year" data-theme="c">
+						<option>Year</option>
+						<option value="2012">2012</option>
+						<option value="2011">2011</option>
+						<option value="2010">2010</option>
+						<option value="2009">2009</option>
+						<option value="2008">2008</option>
+						<option value="2007">2007</option>
+						<option value="2006">2006</option>
+						<option value="2005">2005</option>
+						<option value="2004">2004</option>
+				</select>
+				
+				</fieldset>
+				
+    			</span>
+				</div>
+			</div>
+			
+			<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.8" data-collapsed="false">
+  			 <h3>Plant Record Information</h3>
+  			 <div data-role="fieldcontain">
+  				 <span>
+  			 		<div>
+  			 		<img id="PhotoContainer" src="images/camera.png" style="height:200px; width:200px; border:6px solid white; margin:20ppx 0;" />
+  			 		</div>
+  			 		<a data-role="button" data-icon="check" data-inline="true" data-theme="b" id="TakePhoto">Take Photo</a> 			 			
+
+	      			   <p>Plant Name:</p>
+	     			   <input type="text" name="name" id="Plantname" value="" data-theme="c" />
+
+	        			<p>Geo Location:</p>
+	       				<input type="text" name="name" id="GeoLocation" value="" data-theme="c" />
+	       				<a data-role="button" data-icon="check" data-inline="true" data-theme="b" id="GeoGet">Get Location</a> 			 			
+						
+						<p>Plant Description:</p>
+						<textarea cols="80" rows="40" name="textarea" id="textarea" data-theme="c"></textarea>
+
+    			</span>
+			</div>
+			</div>
+			
+			<fieldset class="ui-grid-a">
+	    	    <a href="#record" data-role="button" data-icon="check" data-inline="true" data-theme="a" id="submitBtn" style="float:right">Submit</a>
+				<a href="#" data-role="button" data-inline="true" data-icon="alert" data-theme="d" id="ResetBtn2" >Reset</a>	
+	    	</fieldset>
+	    	
+		</div>
+	</div>
+	
+	<div data-role="footer" data-theme="e" data-position="fixed" style="Opacity:.7">
+		<div data-role="navbar">  
+			<ul>  
+				<li><a id="browseBtn" data-icon-iconpos="top" data-icon="grid" href="#browser">Browser</a></li>  
+				<li><a id="homeicon1" data-icon-iconpos="top" data-icon="home" href="#home">Home</a></li>  
+				<li><a id="CollectionBtn" data-icon-iconpos="top" data-icon="star" href="#collection">Collection</a></li>  
+				<li><a data-icon-iconpos="top" data-icon="search" href="#search">Search</a></li> 
+			</ul>  
+		</div>  
+	</div>
+</div>
+
+<!-- ================================================================================== -->
+<!-- Detail Record Screen -->
+<!-- ================================================================================== -->
+<div id="RecordDetail" data-role="page" data-theme="a" style="background-image: url(images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+
+	<div data-role="header" data-backbtn="true" data-theme="e" style="Opacity:.7">
+		<a href="#" data-rel="back" data-icon="arrow-l">Back</a>
+		<h1>Detail Information</h1>
+	</div>
+	
+	<div data-role="header" data-backbtn="true" data-theme="d" style="Opacity:.7">
+		<h1 id="DetailRecordName"></h1>
+	</div>
+	
+	<div data-role="content">
+		<div id="RecordImage" style="Opacity:.8;"></div>
+	
+		<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.5" data-collapsed="false">
+  			<h3>Record Information</h3>
+  			 <div data-role="fieldcontain">
+  			 	<span id="BriefRecordContent"></span>
+  			 </div>
+  		</div>
+  		
+  		<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.5" data-collapsed="false">
+  			<h3>Detail Information</h3>
+  			 <div data-role="fieldcontain">
+  			   	<span id="DetailRecordContent"></span>
+  			</div>
+  		</div>
+  		
+  		<div data-role="collapsible" data-theme="e" data-content-theme="c" style="Opacity:.5" data-collapsed="false">
+  			<h3>Description</h3>
+  			 <div data-role="fieldcontain">
+  			   	<span id="RecordDescription"></span>
+  			</div>
+  		</div>
+	</div>
+	
+	<div data-role="footer" data-theme="e" data-position="fixed" style="Opacity:.7">
+		<div data-role="navbar">  
+			<ul>  
+				<li><a id="browseBtn" data-icon-iconpos="top" data-icon="grid" href="#browser">Browser</a></li>  
+				<li><a id="homeicon1" data-icon-iconpos="top" data-icon="home" href="#home">Home</a></li>  
+				<li><a id="CollectionBtn" data-icon-iconpos="top" data-icon="star" href="#collection">Collection</a></li>  
+				<li><a data-icon-iconpos="top" data-icon="search" href="#search">Search</a></li> 
+			</ul>  
+		</div>  
+	</div>
+</div>
+
+<!-- ================================================================================== -->
+<!-- Junkbucket Screen -->
+<!-- ================================================================================== -->
+<div id="junkbucket" data-role="page" data-theme="a" style="background-image: url(images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-attachment:fixed">
+
+	<div data-role="header" data-backbtn="true" data-theme="e" style="Opacity:.7">
+		<a href="#home" data-icon="arrow-l">Back</a>
+		<h1>Junkbucket</h1>
+	</div>
+	
+	<div data-role="header" data-backbtn="true" data-theme="d" style="Opacity:.7">
+		<span><a href="#record" style="float:right"><img src="images/Record.png" style="height:50px; width:50px" /></a></span>
+		<span><a href="#export" style="float:right"><img src="images/Export.png" style="height:50px; width:50px" /></a></span>
+	</div>
+	
+	<div data-role="content">
+		<ul  data-role="listview" data-split-icon="right" data-split-theme="d" data-theme="a"  data-inset="true" id="ListofJunk">
+			<li id="JunkList"><a href="#RecordDetail" ">
+					<img id="ListImg" />
+					<h1 id="ListName"></h1>
+					<p id="ListBrief"></p>
+			</a>
+			<a href="#" data-transition="slideup" data-icon="refresh" id="SlideRecordBtn" class="Btnevent"></a>
+			</li>
+			</ul>
+	</div>
+	
+	<div data-role="footer" data-theme="e" data-position="fixed" style="Opacity:.7">
+		<div data-role="navbar">  
+			<ul>  
+				<li><a id="browseBtn" data-icon-iconpos="top" data-icon="grid" href="#browser">Browser</a></li>  
+				<li><a id="homeicon1" data-icon-iconpos="top" data-icon="home" href="#home">Home</a></li>  
+				<li><a id="CollectionBtn" data-icon-iconpos="top" data-icon="star" href="#collection">Collection</a></li>  
+				<li><a data-icon-iconpos="top" data-icon="search" href="#search">Search</a></li> 
+			</ul>  
+		</div>  
+	</div>
+</div>
+
+</body>
+</html>
