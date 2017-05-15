@@ -11,3 +11,9 @@ When the student discover a beautiful flower, this app can allow user to record 
 
 # Shortscreen
 ![image](http://i.imgur.com/uA12J2Z.png)
+![image](http://i.imgur.com/dSxOeVf.png)
+![image](http://i.imgur.com/ukzerya.png)
+![image](http://i.imgur.com/oKewKz9.png)
+![image](http://i.imgur.com/oKewKz9.png)
+
+
