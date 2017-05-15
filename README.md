@@ -10,4 +10,4 @@ When user selects specific plant in the browse screen, it will go to the detail 
 When the student discover a beautiful flower, this app can allow user to record what they find and can immediately record the GEO location and use the camera to take a photo in a record. Whilst user can very easily to manage the record such as delete and recover the record and also can export the record via suitable method.
 
 # Shortscreen
-![image](http://image.jiantuku.com/17-5-16/69112897-file_1494878846718_1601c.png)
+![image](http://i.imgur.com/uA12J2Z.png)
